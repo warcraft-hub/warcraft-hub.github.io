@@ -9,58 +9,54 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
 
 .header {
   display: block;
   overflow: hidden;
-  background-color: #f1f1f1;
-  padding: 10px 10px 10px 10px ;
+  background-color: #333;
+  padding: 0;
+  margin: 0;
   vertical-align: middle ;
 }
-
-.header a {
-  float: left;
-  color: black;
+.header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+.header li a {
+  display: block;
+  color: white;
   text-align: center;
-  padding: 12px;
-  text-decoration: none;
   font-size: 14px; 
-  line-height: 25px;
-  border-radius: 4px;
+  padding: 10px;
+  text-decoration: none;
 }
-
-.header .logo {
-	font-size: 28px;
-	font-weight: bold;
-	float: left;
-    display: block;
-	color: black;
-}
-
-.header a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.header a.active {
+.header li a.active {
   background-color: #CC0000;
   color: white;
 }
-
-.header-right {
-  float: right;
+.header li a:hover {
+  color: black;
+  background-color: #ddd;
 }
 
-@media screen and (max-width: 500px) {
-  .header a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .header-right {
-    float: none;
-  }
+.logo {
+	font-size: 26px;
+	font-weight: bold;
+	float: left;
+    color: white;
+	margin: 0;
+	padding-top: 5px;
+	padding-left: 10px;
+	overflow: hidden;
 }
 .banner {
   display: block;
@@ -75,26 +71,53 @@ body {
   border-bottom: 2px solid ;
   border-bottom-color: #CC0000;
 }
+main {
+	padding-top: 0px;
+	padding-left: 25px;
+	padding-right:25px;
+}
+
+footer {
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0px;
+  background-color: #efefef;
+  color: black;
+  font-size: 14px; 
+  font-weight: bold;
+  text-align: center;
+}
+footer a {
+ color: #CC0000;
+ text-decoration: none;
+}
+footer a:hover {
+  color: black;
+}
 </style>
 </head>
 <body>
+<header class="header">
 
-<div class="header">
-<a href="#" class="logo">WARCRAFT HUB</a>  	
-<div class="header-right">
-      <a class="active" href="#">Home</a>
-      <a href="#">Addons</a>
-      <a href="#">Databases</a>
-      <a href="#">Guides</a>
-</div>
-
-</div>
+<a class="logo left">WARCRAFT HUB</a>
+<ul>
+<li class="right"><a href="#">Guides</a></li>
+<li class="right"><a href="#">Databases</a></li>
+<li class="right"><a href="#">Addons</a></li>
+<li class="right"><a class="active" href="#">Home</a></li>
+</ul>
 <div class="banner"></div>
-<div style="padding-left:20px">
+</header>
+<main>
   <h1>Coming Soon ...</h1>
   <p>Resize the browser window to see the effect.</p>
   <p>Some content..</p>
-</div>
-
+</main>
+<footer>
+  <p>(D) &middot; <a href="mailto:devil.wow.uk@gmail.com">devil.wow.uk@gmail.com</a> &middot;  2021&copy; </p>
+</footer>
 </body>
 </html>
